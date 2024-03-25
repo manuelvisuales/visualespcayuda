@@ -3,18 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descargar Archivos</title>
+    <title>Mini Inteligencia Artificial</title>
 </head>
 <body>
 
-    <h1>Descargar Archivos</h1>
-    <ul>
-        <li><a href="archivos/archivo1.exe" download>Descargar archivo1.exe</a></li>
-        <li><img src="archivos/archivo2.jpg"width="320" height="240" download></li>
-        <li><video width="320" height="240" controls>
-             <source src="archivos/archivo3.avi" type="video/avi">Descargar archivo3.avi</video></li>
-        <li><a href="archivos/archivo4.7z" download>Descargar archivo4.zip</a></li>
-    </ul>
+    <h1>Mini Inteligencia Artificial</h1>
+    <ul id="respuesta-lista"></ul>
 
+    <script>
+        function responder() {
+            var pregunta = document.getElementById('input').value.toLowerCase();
+            var respuestaElemento = document.getElementById('respuesta-lista');
+            var horaActual = new Date().toLocaleTimeString();
+
+            var respuesta;
+
+            if (pregunta.includes('hola')) 
+               {respuesta = '¡Hola! ¿En qué puedo ayudarte?';}
+			   
+            else if (pregunta.includes('tiempo')) 
+                {respuesta = `${horaActual}`;}
+				
+			else if (pregunta.includes('hora')) 
+                {respuesta = `${horaActual}`;}
+				
+            else if (pregunta.includes('nombre')) 
+                {respuesta = 'Mi nombre es Mini AI.';}
+				
+            else {respuesta = 'Lo siento, no entiendo la pregunta.';}
+            
+
+            var itemLista = document.createElement("li");
+            itemLista.textContent = `${respuesta}`;
+            respuestaElemento.appendChild(itemLista);
+        }
+    </script>
+<input type="text" id="input" placeholder="Hazme una pregunta...">
+    <button onclick="responder()">Enviar</button>
 </body>
 </html>
