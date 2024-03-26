@@ -16,10 +16,7 @@
             var respuestaElemento = document.getElementById('respuesta-lista');
             var horaActual = new Date().toLocaleTimeString();
             var respuesta;
-            var itemLista = document.createElement("li");
-                
-		itemLista.textContent = `${respuesta}`;
-                respuestaElemento.appendChild(itemLista);
+            
 		
             if (pregunta.includes('hola')) 
                {respuesta = '¡Hola! ¿En qué puedo ayudarte?';}
@@ -49,7 +46,10 @@
             else {respuesta = 'Lo siento, no entiendo la pregunta.';}
             
 
-            
+          var itemLista = document.createElement("li");
+                
+		itemLista.textContent = `${respuesta}`;
+                respuestaElemento.appendChild(itemLista);  
             
         }
     </script>
