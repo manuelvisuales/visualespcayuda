@@ -39,10 +39,10 @@
                 {respuesta =`Fui programado por Manuel,
 	         un joven entusiasta iniciandose en el mundo de la programación web.
 	         Las respuestas las busco en mi base de datos, aun no soy 
-	         capaz de usar internet.`;}
+	         capaz de usar internet`;}
 		
             else if (pregunta.includes('nombre')) 
-                {respuesta = 'Mi nombre es Esther. Tu como te llamas?';}
+                {respuesta = 'Mi nombre es Esther, Tu como te llamas';}
 
 	    else if (pregunta.includes('hazme un cuento')) 
                 {respuesta = 'Havia una vez....Que se convirtio en dos veces, jajaja';}
@@ -50,8 +50,8 @@
 	    else if (pregunta.includes('como freir un huevo')) 
                 {respuesta = 'Freir un huevo es facil pero antes de comenzar
 		  quiero recordarte sobre el cuidado que debes tener al trabajar en la
-		   cocina. Paso 1. Poner a la estufa el sarten con 3 cucharadas de aceite. Paso2. esperar a que 
-		  el aceite caliente y vertir el huevo. Paso3. Poner sal a gusto. Le recomiendo consumir el huevo
+		   cocina, +Poner a la estufa el sarten con + cucharadas de aceite. +esperar a que 
+		  el aceite caliente y vertir el huevo. +Poner sal a gusto. +recomiendo consumir el huevo
 	          hervido es mas rico en proteinas y calcio, que disfrutes tu huevo.';}	 
 
             else if (pregunta.includes('como encender apropiadamente mi computadora')) 
@@ -67,7 +67,7 @@
 
             else {respuesta = 'Lo siento, no entiendo la pregunta.';}
             
-var itemLista = document.createElement("li");
+            var itemLista = document.createElement("li");
             itemLista.textContent = `${respuesta}`;
             respuestaElemento.appendChild(itemLista);
         }
