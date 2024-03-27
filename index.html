@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <h1>Mini Inteligencia Artificial</h1>
+    <h1>Hola, en que puedo ayudarte</h1>
     
     
     
@@ -23,6 +23,13 @@
 
             if (pregunta.includes('hola')) 
                {respuesta = '¡Hola! ¿En qué puedo ayudarte?';}
+
+	    else if (pregunta.includes('como estas')) 
+               {respuesta = 'Muy bien, gracias espero estes bien tambien';}
+
+	  else if (pregunta.includes('como funcionas')) 
+               {respuesta = 'Fui dise;ada para responder cuestiones de los usuarios. Cada pregunta es interpretada
+		       y luego busco en mi base de datos la mejor respuesta. Aun no avilitan mi conexion a internet';}
 			   
             else if (pregunta.includes('tiempo')) 
                 {respuesta = `${horaActual}`;}
