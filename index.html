@@ -8,6 +8,9 @@
 <body>
 
     <h1>Mini Inteligencia Artificial</h1>
+    
+    
+    
     <ul id="respuesta-lista"></ul>
 
     <script>
@@ -15,6 +18,7 @@
             var pregunta = document.getElementById('input').value.toLowerCase();
             var respuestaElemento = document.getElementById('respuesta-lista');
             var horaActual = new Date().toLocaleTimeString();
+
             var respuesta;
             
 		
@@ -63,13 +67,11 @@
 
             else {respuesta = 'Lo siento, no entiendo la pregunta.';}
             
-
-          var itemLista = document.createElement("li");
-                
-		itemLista.textContent = `${respuesta}`;
-                respuestaElemento.appendChild(itemLista);  
-            
+var itemLista = document.createElement("li");
+            itemLista.textContent = `${respuesta}`;
+            respuestaElemento.appendChild(itemLista);
         }
+          
     </script>
 <input type="text" id="input" placeholder="Hazme una pregunta...">
     <button onclick="responder()">Enviar</button>
