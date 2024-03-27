@@ -20,60 +20,36 @@
             var horaActual = new Date().toLocaleTimeString();
 
             var respuesta;
-            
-		
+
             if (pregunta.includes('hola')) 
                {respuesta = '¡Hola! ¿En qué puedo ayudarte?';}
 			   
             else if (pregunta.includes('tiempo')) 
                 {respuesta = `${horaActual}`;}
 				
-	   else if (pregunta.includes('hora')) 
+			else if (pregunta.includes('hora')) 
                 {respuesta = `${horaActual}`;}
-
-	   else if (pregunta.includes('idioma')) 
-                {respuesta = `aun solo hablo español,
-		 mi creador me esta eseñando ingles`;}  
-
-            else if (pregunta.includes('como funcionas')) 
-                {respuesta =`Fui programado por Manuel,
-	         un joven entusiasta iniciandose en el mundo de la programación web.
-	         Las respuestas las busco en mi base de datos, aun no soy 
-	         capaz de usar internet`;}
-		
+				
             else if (pregunta.includes('nombre')) 
-                {respuesta = 'Mi nombre es Esther, Tu como te llamas';}
-
-	    else if (pregunta.includes('hazme un cuento')) 
-                {respuesta = 'Havia una vez....Que se convirtio en dos veces, jajaja';}
-
-	    else if (pregunta.includes('como freir un huevo')) 
-                {respuesta = 'Freir un huevo es facil pero antes de comenzar
-		  quiero recordarte sobre el cuidado que debes tener al trabajar en la
-		   cocina, +Poner a la estufa el sarten con + cucharadas de aceite. +esperar a que 
-		  el aceite caliente y vertir el huevo. +Poner sal a gusto. +recomiendo consumir el huevo
-	          hervido es mas rico en proteinas y calcio, que disfrutes tu huevo.';}	 
-
-            else if (pregunta.includes('como encender apropiadamente mi computadora')) 
-                {respuesta = 'La forma imdicada para encender tu PC es primeramente encendiendo el backup, luego el monitor, despues
-		la torre y por último la speaker';}
-
-            else if (pregunta.includes('cuantos meses tiene un año')) 
-                {respuesta = 'Un año tiene doce meses. Enero,Febrero, Marzo, Abril,Mayo,Junio, Julio,Agosto, Septiembre, Octubre, Noviembre
-		y Diciembre';}
-
-	    else if (pregunta.includes('chiste')) 
-                {respuesta = 'Havia una vez....Que se convirtio en dos veces, jajaja';}
-
+                {respuesta = 'Mi nombre es Mini AI.';}
+				
             else {respuesta = 'Lo siento, no entiendo la pregunta.';}
             
+
             var itemLista = document.createElement("li");
             itemLista.textContent = `${respuesta}`;
             respuestaElemento.appendChild(itemLista);
         }
-          
+
+    var button=document.getElementById("button");
+        
+           button.addEventListener('click', function()
+             {alert("diste click!") });
+     
     </script>
-<input type="text" id="input" placeholder="Hazme una pregunta...">
+    <input type="text" id="input" placeholder="Hazme una pregunta...">
     <button onclick="responder()">Enviar</button>
+    <button id="button">Enviar notificacion</button>
+
 </body>
 </html>
