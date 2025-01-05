@@ -1,57 +1,58 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Inteligencia Artificial</title>
-</head>
-<body>
+    <title>Document</title>
 
-    <h1>Hola, en que puedo ayudarte</h1>
-    
-    
-    
-    <ul id="respuesta-lista"></ul>
+    <script src="./public/js/face-api.min.js"></script>
 
-    <script>
-        function responder() {
-            var pregunta = document.getElementById('input').value.toLowerCase();
-            var respuestaElemento = document.getElementById('respuesta-lista');
-            var horaActual = new Date().toLocaleTimeString();
-
-            var respuesta;
-
-            if (pregunta.includes('hola')) 
-               {respuesta = '¡Hola! ¿En qué puedo ayudarte?';}
-		    
-            else if (pregunta.includes('tiempo')) 
-                {respuesta = `${horaActual}`;}
-				
-	    else if (pregunta.includes('hora')) 
-                {respuesta = `${horaActual}`;}
-
-            else if (pregunta.includes('chiste')) 
-                {respuesta = `esta era una vez que se convirtio en dos veces`;}
-				
-            else if (pregunta.includes('nombre')) 
-                {respuesta = 'Mi nombre es Mini AI.';}
-				
-            else {respuesta = 'Lo siento, no entiendo la pregunta.';}
-            
-
-            var itemLista = document.createElement("li");
-            itemLista.textContent = `${respuesta}`;
-            respuestaElemento.appendChild(itemLista);
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-    var button=document.getElementById("button");
-        
-           button.addEventListener('click', function()
-             {alert("diste click!") });
-     
-    </script>
-    <input type="text" id="input" placeholder="Hazme una pregunta...">
-    <button onclick="responder()">Enviar</button>
+        body {
+            text-align: center;
+            background: #f2f6f8;
+        }
 
+        img {
+            position: absolute;
+            z-index: 1;
+        }
+
+        #container {
+            display: inline-block;
+            width: 612px;
+            height: 612px;
+            margin: 0 auto;
+            background: black;
+            position: relative;
+            border: 5px solid black;
+            border-radius: 10px;
+            box-shadow: 0 5px 50px #333
+        }
+
+        #canvas {
+            position: relative;
+            z-index: 20;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <img src="./public/images/image3.jpg" id="image">
+        <canvas id="canvas" width="612" height="612"></canvas>
+    </div>
+
+    <script src="./public/js/script.js" type="module"></script>
 </body>
+
 </html>
